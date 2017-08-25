@@ -9,6 +9,7 @@ namespace PardotAPI
     public static class GlobalConstants
     {
         public static string pardotAPIUrl = "https://pi.pardot.com/api";
+        public static string api_ver="3";
     }
 
     public static class GlobalMethods

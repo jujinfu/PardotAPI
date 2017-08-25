@@ -5,7 +5,6 @@ namespace PardotAPI
     public class opportunity : PardotAPI.@object
     {
         public string id { get; set; }
-        public string campaign_id { get; set; }
         public string name { get; set; }
         public string value { get; set; }
         public string probability { get; set; }
@@ -15,7 +14,8 @@ namespace PardotAPI
         public string closed_at { get; set; }
         public string created_at { get; set; }
         public string updated_at { get; set; }
-
+        public string campaign { get; set; }
+        public string prospects {get;set;}
         public opportunity() { }
         public opportunity(XmlNode source) { loadObject(source);}
     }
