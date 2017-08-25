@@ -7,7 +7,7 @@ namespace PardotAPI
         public string id { get; set; }
         public string name { get; set; }
         public string is_public { get; set; }
-        public bool is_dynamic { get; set; }
+        public string is_dynamic { get; set; }
         public string title { get; set; }
         public string description { get; set; }
         public string is_crm_visible { get; set; }

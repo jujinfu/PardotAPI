@@ -6,8 +6,8 @@ namespace PardotAPI
     {
         public string id { get; set; }
         public string name { get; set; }
-        public string campaign_id { get; set; }
-        public string embed_code { get; set; }
+        public string campaign { get; set; }
+        public string embedCode { get; set; }
         public string created_at { get; set; }
         public string updated_at { get; set; }
 

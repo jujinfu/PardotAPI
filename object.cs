@@ -1,5 +1,7 @@
-﻿using System.Reflection;
+﻿using System.Collections.Generic;
+using System.Reflection;
 using System.Xml;
+using System.Xml.Serialization;
 
 namespace PardotAPI
 {
@@ -45,17 +47,15 @@ namespace PardotAPI
         public void loadObject(XmlNode thisSource)
         {
             if (thisSource == null) return;
+
             if (thisSource.ChildNodes.Count > 0)
             {
                 foreach (XmlNode prop in thisSource.ChildNodes)
                 {
                     if (prop.InnerText != null)
-                    {
                         this[prop.Name] = prop.InnerText.ToString();
-                    }
                 }
             }
-
             finalizeLoad(thisSource);
         }
 

@@ -21,31 +21,34 @@ namespace PardotAPI
         public const string exampleUrl = "https://pi.pardot.com/api/<object>/version/3/do/<operator>/<identifier_field>/<identifier>";
         public string method = "xml";
         public string status;
+        public string api_ver;
 
 
         // ----------------------------------
         // ------- child interfaces ---------
         // ----------------------------------
 
+        public PardotAPI.@interface accounts;
         public PardotAPI.@interface campaigns;
-        public PardotAPI.@interface custom_fields;
-        public PardotAPI.@interface custom_redirects;
-        public PardotAPI.@interface dynamic_contents;
+        public PardotAPI.@interface customFields;
+        public PardotAPI.@interface customRedirects;
+        public PardotAPI.@interface dynamicContents;
         public PardotAPI.@interface emails;
-        public PardotAPI.@interface email_templates;
+        public PardotAPI.@interface emailClicks;
+        public PardotAPI.@interface emailTemplates;
         public PardotAPI.@interface forms;
-        public PardotAPI.@interface lifecycle_histories;
-        public PardotAPI.@interface lifecycle_stages;
+        public PardotAPI.@interface lifecycleHistories;
+        public PardotAPI.@interface lifecycleStages;
         public PardotAPI.@interface lists;
-        public PardotAPI.@interface list_memberships;
+        public PardotAPI.@interface listMemberships;
         public PardotAPI.@interface opportunities;
         public PardotAPI.@interface prospects;
-        public PardotAPI.@interface prospect_accounts;
+        public PardotAPI.@interface prospectAccounts;
         public PardotAPI.@interface tags;
-        public PardotAPI.@interface tag_objects;
+        public PardotAPI.@interface tagObjects;
         public PardotAPI.@interface users;
         public PardotAPI.@interface visitors;
-        public PardotAPI.@interface visitor_activities;
+        public PardotAPI.@interface visitorActivities;
         public PardotAPI.@interface visits;
 
         
@@ -85,25 +88,27 @@ namespace PardotAPI
             }
 
             // load child objects
+            accounts = new PardotAPI.@interface(ref token, "account");
             campaigns = new PardotAPI.@interface(ref token, "campaign");
-            custom_fields = new PardotAPI.@interface(ref token, "custom_field");
-            custom_redirects = new PardotAPI.@interface(ref token, "custom_redirect");
-            dynamic_contents = new PardotAPI.@interface(ref token, "dynamic_content");
+            customFields = new PardotAPI.@interface(ref token, "customField");
+            customRedirects = new PardotAPI.@interface(ref token, "customRedirect");
+            dynamicContents = new PardotAPI.@interface(ref token, "dynamicContent");
             emails = new PardotAPI.@interface(ref token, "email");
-            email_templates = new PardotAPI.@interface(ref token, "email_template");
+            emailClicks = new PardotAPI.@interface(ref token, "emailClick");
+            emailTemplates = new PardotAPI.@interface(ref token, "emailTemplate");
             forms = new PardotAPI.@interface(ref token, "form");
-            lifecycle_histories = new PardotAPI.@interface(ref token, "lifecycle_history");
-            lifecycle_stages = new PardotAPI.@interface(ref token, "lifecycle_stage");
+            lifecycleHistories = new PardotAPI.@interface(ref token, "lifecycleHistorie");
+            lifecycleStages = new PardotAPI.@interface(ref token, "lifecycleStage");
             lists = new PardotAPI.@interface(ref token, "list");
-            list_memberships = new PardotAPI.@interface(ref token, "list_membership");
+            listMemberships = new PardotAPI.@interface(ref token, "listMembership");
             opportunities = new PardotAPI.@interface(ref token, "opportunity");
             prospects = new PardotAPI.@interface(ref token, "prospect");
-            prospect_accounts = new PardotAPI.@interface(ref token, "prospect_account");
+            prospectAccounts = new PardotAPI.@interface(ref token, "prospectAccount");
             tags = new PardotAPI.@interface(ref token, "tag");
-            tag_objects = new PardotAPI.@interface(ref token, "tag_object"); ;
+            tagObjects = new PardotAPI.@interface(ref token, "tagObject"); ;
             users = new PardotAPI.@interface(ref token, "user");
             visitors = new PardotAPI.@interface(ref token, "visitor");
-            visitor_activities = new PardotAPI.@interface(ref token, "visitor_activity");
+            visitorActivities = new PardotAPI.@interface(ref token, "visitorActivity");
             visits = new PardotAPI.@interface(ref token, "visit");
         }
 

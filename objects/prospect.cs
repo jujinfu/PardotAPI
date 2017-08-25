@@ -50,7 +50,13 @@ namespace PardotAPI
         public string is_starred { get; set; }
         public string created_at { get; set; }
         public string updated_at { get; set; }
-
+        //public string Inactive { get; set; }
+        //public string Region { get; set; }
+        //public string Unsubscribed { set; get; }
+        //public string prospect_account_id { get; set; }
+        //public string campagin {set;get;}
+        //public string assigned_to { set; get; }
+        // string last_activity { get; set; }
         public prospect() { }
         public prospect(XmlNode thisSource) { loadObject(thisSource); }
     }

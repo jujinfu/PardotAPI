@@ -11,7 +11,7 @@ namespace PardotAPI
     {
         private PardotAPI.token token;
         private string interfaceName;
-        private string baseUrl = "{0}/version/3/do/{1}";
+        private string baseUrl = "{0}/version/"+GlobalConstants.api_ver+"/do/{1}";
         private const string identifierUrl = "/{2}/{3}";
         private const string baseMessage = "api_key={0}&user_key={1}";
 
@@ -92,7 +92,7 @@ namespace PardotAPI
         }
         private List<object> loadObjects(PardotAPI.request request)
         {
-            List<object> objects = new List<object>();
+            List<object> objects = new List<object>();           
             if (request.response.isValid())
             {
                 XmlNode data = request.response.xml.SelectSingleNode("/rsp/result");
