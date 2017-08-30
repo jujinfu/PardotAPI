@@ -43,6 +43,7 @@ namespace PardotAPI
             request.Method = "POST";
             request.ContentType = "application/x-www-form-urlencoded";
             request.ContentLength = message.Length;
+            request.Timeout = 60000*5; //5 minutes
             
             StreamWriter requestWriter = new StreamWriter(request.GetRequestStream());
             requestWriter.Write(message);
