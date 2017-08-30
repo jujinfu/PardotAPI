@@ -44,6 +44,7 @@ namespace PardotAPI
         public PardotAPI.@interface opportunities;
         public PardotAPI.@interface prospects;
         public PardotAPI.@interface prospectAccounts;
+        public PardotAPI.@interface stats;
         public PardotAPI.@interface tags;
         public PardotAPI.@interface tagObjects;
         public PardotAPI.@interface users;
@@ -104,6 +105,7 @@ namespace PardotAPI
             opportunities = new PardotAPI.@interface(ref token, "opportunity");
             prospects = new PardotAPI.@interface(ref token, "prospect");
             prospectAccounts = new PardotAPI.@interface(ref token, "prospectAccount");
+            stats = new PardotAPI.@interface(ref token, "stat");
             tags = new PardotAPI.@interface(ref token, "tag");
             tagObjects = new PardotAPI.@interface(ref token, "tagObject"); ;
             users = new PardotAPI.@interface(ref token, "user");

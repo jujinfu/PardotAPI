@@ -45,6 +45,17 @@ namespace PardotAPI
             request.response.data = loadObjects(request);
             return request;
         }
+        public PardotAPI.request stats(string thisIdentifierField, string thisIdentifier)
+        {
+            return stats(thisIdentifierField, thisIdentifier, new Dictionary<string, string>());
+        }
+        public PardotAPI.request stats(string thisIdentifierField, string thisIdentifier, Dictionary<string, string> parameters)
+        {
+            string url = string.Format(baseUrl + identifierUrl, "email", "stats", thisIdentifierField, thisIdentifier);
+            PardotAPI.request request = new PardotAPI.request(url, getMessage(parameters), interfaceName);
+            request.response.data = loadObjects(request);
+            return request;
+        }
         public PardotAPI.request query()
         {
             return query("", "", new Dictionary < string, string >() );
